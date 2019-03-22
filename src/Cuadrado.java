@@ -16,4 +16,8 @@ public class Cuadrado {
     int calcularSuma() {
         return largo + ancho;
     }
+
+    public String sumarStrings(String a, String b) {
+        return a + b;
+    }
 }
