@@ -1,5 +1,4 @@
-import mockit.Expectations;
-import mockit.Mocked;
+import be.eliwan.jfaker.mockito.FakerMock;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,11 +15,9 @@ public class CuadradoTest {
     }
 
     @Test
-    public void mockServer(@Mocked MockServer server){
+    public void mockServer(){
+        MockServer person = FakerMock.withFields(MockServer.class, "value", "5");
         Cuadrado c = new Cuadrado(10, 2);
-        new Expectations(){{
-            server.connect(c); result = -1;
-        }};
     }
 
 
