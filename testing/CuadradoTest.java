@@ -16,7 +16,7 @@ public class CuadradoTest {
 
     @Test
     public void mockServer(){
-        MockServer person = FakerMock.withFields(MockServer.class, "value", "5");
+        MockServer server = FakerMock.withFields(MockServer.class, "value", "5");
         Cuadrado c = new Cuadrado(10, 2);
     }
 
